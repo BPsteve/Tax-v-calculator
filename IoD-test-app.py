@@ -1,7 +1,7 @@
 # Tell us your salary
 salary = float(input("Enter your salary: "))
 # Tax rates input for Virginia
-statetax = .0472
+statetax = float(input(".0472 is the tax rate for VA.\nEnter your state tax rate: {5% as .05} :"))
 # Standard tax rates
 fedtax = .1168
 sstax = .062
