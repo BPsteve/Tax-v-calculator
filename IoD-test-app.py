@@ -12,7 +12,7 @@ medicaretax = .0145
 # Calculate the taxes
 stax = (salary * statetax)
 
-# Function to calculate federal tax based on salaryp
+# Function to calculate federal tax based on salary
 
 def calculate_fed_tax(salary):
     if salary <= 317:
