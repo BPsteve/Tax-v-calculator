@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="876c51e1-06a1-4ed7-bf23-dca875a697f2" name="Changes" comment="Added ability to input your own tax rate for the state" />
+    <list default="true" id="876c51e1-06a1-4ed7-bf23-dca875a697f2" name="Changes" comment="Added ability to input your own tax rate for the state">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +84,7 @@
       <workItem from="1714668109962" duration="7612000" />
       <workItem from="1714675999834" duration="991000" />
       <workItem from="1715217911239" duration="2884000" />
+      <workItem from="1715971760539" duration="2382000" />
     </task>
     <task id="LOCAL-00001" summary="Added ability to input your own tax rate for the state">
       <option name="closed" value="true" />
@@ -115,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715219919731</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added ability to input your own tax rate for the state">
+      <option name="closed" value="true" />
+      <created>1715972971843</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715972971843</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +148,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added ability to input your own tax rate for the state" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/First_Project$IoD_test_app.coverage" NAME="IoD-test-app Coverage Results" MODIFIED="1715219513629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/First_Project$IoD_test_app.coverage" NAME="IoD-test-app Coverage Results" MODIFIED="1715972881876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
