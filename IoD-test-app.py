@@ -2,7 +2,7 @@
 # Tell us your salary
 salary = float(input("Enter your monthly salary: "))
 
-# Tax rates input for Virginia
+# Tax rates input for Virginia 2024
 statetax = float(input(".0472 is the tax rate for VA.\nEnter your state tax rate (e.g., 5% as .05): "))
 
 # Standard tax rates
@@ -12,22 +12,22 @@ medicaretax = .0145
 # Calculate the state tax
 stax = salary * statetax
 
-# Function to calculate federal tax based on salary
+# Function to calculate federal tax based on salary using 2024 tax brackets each value is in monthly income
 def calculate_fed_tax(salary):
-    if salary <= 317:
-        return 0.00 + 0.10 * salary
-    elif 317 < salary <= 1125:
-        return 31.70 + 0.12 * (salary - 317)
-    elif 1125 < salary <= 3606:
-        return 116.14 + 0.22 * (salary - 1125)
-    elif 3606 < salary <= 7333:
+    if salary <= 916.67:
+        return 0.10 * salary
+    elif 916.67 < salary <= 3727.17:
+        return 31.70 + 0.12 * (salary - 916.67)
+    elif 3727.17 < salary <= 3606:
+        return 116.14 + 0.22 * (salary - 3727.17)
+    elif 3606 < salary <= 7333.33:
         return 633.50 + 0.24 * (salary - 3606)
-    elif 7333 < salary <= 13710:
-        return 1508.54 + 0.32 * (salary - 7333)
-    elif 13710 < salary <= 17325:
-        return 3617.02 + 0.35 * (salary - 13710)
+    elif 7333.33 < salary <= 13710.00:
+        return 1508.54 + 0.32 * (salary - 7333.33)
+    elif 13710.00 < salary <= 1443.75:
+        return 3617.02 + 0.35 * (salary - 13710.00)
     else:
-        return 4863.47 + 0.37 * (salary - 17325)
+        return 4863.47 + 0.37 * (salary - 17325.00)
 
 ftax = calculate_fed_tax(salary)
 
