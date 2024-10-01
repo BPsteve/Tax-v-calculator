@@ -12,7 +12,7 @@ def validate_salary(salary):
                 print(f"Invalid input: {e}. Please try again.")
                 salary = input("Enter your monthly salary: ")
             else:
-				print("Maximum attempts reached. Exiting.")
+                print("Maximum attempts reached. Exiting.")
                 return None
 
 def validate_state_tax(state_tax):
