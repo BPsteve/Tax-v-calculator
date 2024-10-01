@@ -9,11 +9,11 @@ def validate_salary(salary):
             return salary
         except ValueError as e:
             if attempt < 2:  # Allow 2 more attempts
-                    print(f"Invalid input: {e}. Please try again.")
-                    salary = input("Enter your monthly salary: ")
-                else:
-                    print("Maximum attempts reached. Exiting.")
-                    return None 
+                print(f"Invalid input: {e}. Please try again.")
+                salary = input("Enter your monthly salary: ")
+            else:
+				print("Maximum attempts reached. Exiting.")
+                return None
 
 def validate_state_tax(state_tax):
     for attempt in range(3):
@@ -31,8 +31,8 @@ def validate_state_tax(state_tax):
                 return None
 
 def validate_employment_type(employment_type):
-    valid_types = ['self', 'company']  
-    for attempt in range(2): 
+    valid_types = ['self', 'company']
+    for attempt in range(2):
         if employment_type in valid_types:
             return employment_type
         else:
@@ -69,7 +69,6 @@ medicaretax_employee = .0145  # Medicare tax for employee (1.45%)
 # Self-employed individuals pay both employee and employer portions
 sstax_self = .124  # Social Security tax for self-employed (12.4%)
 medicaretax_self = .029  # Medicare tax for self-employed (2.9%)
-
 additional_medicare_tax = .009  # Additional 0.9% Medicare tax for income over $200,000 annually
 
 # Wage base limits for 2024
@@ -79,7 +78,7 @@ medicare_wage_base = 200000  # Annual threshold for additional Medicare tax
 # Convert monthly salary to annual salary
 annual_salary = monthly_salary * 12
 
-# Calculate the state tax
+# Calc the state tax
 annual_stax = annual_salary * statetax
 
 # Function to calc fed tax based on annual salary using 2024 tax brackets
@@ -109,24 +108,24 @@ if employment_type == "self":
         soctax = annual_salary * sstax_self  # Apply sstax on full salary if under the limit
     else:
         soctax = social_security_wage_base * sstax_self  # Only tax up to the wage base limit
-
+    
     # Medicare tax for self-employed
     medicare_tax = annual_salary * medicaretax_self
-
+    
     # Apply additional Medicare tax if income is over the threshold
     if annual_salary > medicare_wage_base:
         medicare_tax += (annual_salary - medicare_wage_base) * additional_medicare_tax
-
 elif employment_type == "company":
+    
     # Company-employed pays only employee portion
     if annual_salary <= social_security_wage_base:
         soctax = annual_salary * sstax_employee  # Apply sstax on full salary if under the limit
     else:
         soctax = social_security_wage_base * sstax_employee  # Only tax up to the wage base limit
-
+    
     # Medicare tax for employees
     medicare_tax = annual_salary * medicaretax_employee
-
+    
     # Apply additional Medicare tax if income is over the threshold
     if annual_salary > medicare_wage_base:
         medicare_tax += (annual_salary - medicare_wage_base) * additional_medicare_tax
